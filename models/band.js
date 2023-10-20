@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const {
   Model
 } = require('sequelize');
@@ -40,5 +40,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Band',
     tableName: 'bands',
     timestamps: false
-  }
-)}
+  })
+  return Band
+}

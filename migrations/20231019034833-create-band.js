@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      available_start_time: {
+     start_time: {
         type: Sequelize.DATE,
         allowNull: false,
       },

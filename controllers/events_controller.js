@@ -60,4 +60,20 @@ events.put('/:id', async (req, res) => {
     }
 })
 
+//DELETE AN EVENT
+events.delete('/:id', async (req, res) => {
+    try {
+        const deletedEvents = await Event.destroy({
+            where: {
+                event_id: req.params.id
+            }
+        })
+        res.status(200).json({
+            message: `Successfully deleted ${deletedEvents} event(s)`
+        })
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
+
 module.exports = events

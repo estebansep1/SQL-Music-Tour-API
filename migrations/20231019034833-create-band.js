@@ -1,5 +1,4 @@
-'use strict';
-/** @type {import('sequelize-cli').Migration} */
+'use strict'
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('bands', {
@@ -17,7 +16,7 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-     available_start_time: {
+      available_start_time: {
         type: Sequelize.DATE,
         allowNull: false,
       },
